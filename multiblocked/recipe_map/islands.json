@@ -1,0 +1,68 @@
+{
+  "name": "islands",
+  "progressTexture": "multiblocked:textures/gui/progress_bar_arrow.png",
+  "fuelTexture": "multiblocked:textures/gui/progress_bar_fuel.png",
+  "recipes": [
+    {
+      "uid": "774ae9ef-4c0b-4994-b718-44967b0bd395",
+      "duration": 200,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "minecraft:iron_ingot"
+              }
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "minecraft:iron_ingot"
+              }
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "minecraft:iron_ingot"
+              }
+            },
+            "chance": 1.0
+          }
+        ],
+        "fluid": [
+          {
+            "content": {
+              "fluid": "minecraft:lava",
+              "amount": 1000
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "alloyed:steel_ingot"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      }
+    }
+  ]
+}

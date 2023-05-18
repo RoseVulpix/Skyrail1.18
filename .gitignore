@@ -1,0 +1,27 @@
+# Exclude exported CurseForge zip files
+*.zip
+
+# Exclude exported Modrinth modpacks
+*.mrpack
+
+# Exlude probe, Probe should be run on the client side
+/kubejs/probe/*
+/kubejs/documentation
+
+# Exclude all except resource packs we want
+/resourcepacks/*
+# !/resourcepacks/name
+
+#All the actual running modpack things
+.mixin.out/**
+crash-reports/**
+logs/**
+mods/**
+natives/**
+paintings/**
+palettes/**
+local/**
+patchouli_books/**
+saves/**
+screenshots/**
+themes/**

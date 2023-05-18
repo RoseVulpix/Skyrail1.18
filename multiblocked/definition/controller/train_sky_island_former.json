@@ -1,0 +1,179 @@
+{
+  "version": 3,
+  "location": "train_sky:island_former",
+  "traits": {
+    "item": [
+      {
+        "cIO": 0,
+        "gIO": 2,
+        "mIO": 0,
+        "slotName": "i1",
+        "x": 121,
+        "y": 112,
+        "autoIO": false
+      },
+      {
+        "cIO": 0,
+        "gIO": 2,
+        "mIO": 0,
+        "slotName": "i2",
+        "x": 32,
+        "y": 113,
+        "autoIO": false
+      },
+      {
+        "cIO": 0,
+        "gIO": 2,
+        "mIO": 0,
+        "slotName": "i3",
+        "x": 77,
+        "y": 51,
+        "autoIO": false
+      },
+      {
+        "cIO": 1,
+        "gIO": 2,
+        "mIO": 1,
+        "slotName": "o1",
+        "x": 77,
+        "y": 88,
+        "autoIO": false
+      }
+    ],
+    "fluid": [
+      {
+        "cIO": 0,
+        "gIO": 2,
+        "mIO": 0,
+        "slotName": "fi1",
+        "x": 138,
+        "y": 77,
+        "autoIO": false,
+        "tC": 4000,
+        "w": 18,
+        "h": 18,
+        "fillDir": "ALWAYS_FULL"
+      }
+    ]
+  },
+  "properties": {
+    "rotationState": "ALL",
+    "showInJei": true,
+    "isOpaque": true,
+    "hasDynamicShape": false,
+    "hasCollision": true,
+    "destroyTime": 30.0,
+    "explosionResistance": 36.0,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "friction": 0.6,
+    "harvestLevel": 0,
+    "stackSize": 64,
+    "tabGroup": "multiblocked.all"
+  },
+  "status": {
+    "unformed": {
+      "renderer": {
+        "state": {
+          "id": "minecraft:polished_diorite",
+          "meta": 0
+        },
+        "type": "blockstate",
+        "postRenderer": true
+      }
+    },
+    "idle": {
+      "parent": "unformed"
+    },
+    "working": {
+      "renderer": {
+        "state": {
+          "id": "minecraft:polished_andesite",
+          "meta": 0
+        },
+        "type": "blockstate",
+        "postRenderer": true
+      },
+      "parent": "idle"
+    },
+    "suspend": {
+      "parent": "working"
+    }
+  },
+  "recipeMap": "islands",
+  "basePattern": {
+    "structureDir": [
+      "BACK",
+      "UP",
+      "RIGHT"
+    ],
+    "pattern": [
+      [
+        "A A",
+        "   "
+      ],
+      [
+        " B ",
+        " @ "
+      ],
+      [
+        "A A",
+        "   "
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "blocks": [
+          {
+            "id": "multiblocked:pedestal"
+          }
+        ],
+        "type": "blocks",
+        "slotName": "i1"
+      },
+      "controller": {
+        "location": "train_sky:island_former",
+        "type": "component"
+      },
+      "B": {
+        "blocks": [
+          {
+            "id": "create:fluid_tank"
+          }
+        ],
+        "type": "blocks"
+      },
+      "any": {
+        "type": "any"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "A": [
+        "A"
+      ],
+      "B": [
+        "B"
+      ]
+    }
+  }
+}

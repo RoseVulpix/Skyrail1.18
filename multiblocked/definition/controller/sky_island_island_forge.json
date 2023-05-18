@@ -1,0 +1,214 @@
+{
+  "version": 3,
+  "location": "sky_island:island_forge",
+  "traits": {
+    "item": [
+      {
+        "cIO": 1,
+        "gIO": 1,
+        "mIO": 1,
+        "slotName": "output1",
+        "x": 78,
+        "y": 85,
+        "autoIO": false
+      },
+      {
+        "cIO": 0,
+        "gIO": 2,
+        "mIO": 0,
+        "slotName": "input1",
+        "x": 113,
+        "y": 122,
+        "autoIO": false
+      },
+      {
+        "cIO": 0,
+        "gIO": 2,
+        "mIO": 0,
+        "slotName": "input2",
+        "x": 29,
+        "y": 122,
+        "autoIO": false
+      },
+      {
+        "cIO": 0,
+        "gIO": 2,
+        "mIO": 0,
+        "slotName": "input3",
+        "x": 77,
+        "y": 37,
+        "autoIO": false
+      }
+    ],
+    "fluid": [
+      {
+        "cIO": 0,
+        "gIO": 2,
+        "mIO": 0,
+        "slotName": "fli1",
+        "x": 72,
+        "y": 86,
+        "autoIO": false,
+        "tC": 1000,
+        "w": 18,
+        "h": 18,
+        "fillDir": "ALWAYS_FULL"
+      }
+    ]
+  },
+  "properties": {
+    "rotationState": "ALL",
+    "showInJei": true,
+    "isOpaque": true,
+    "hasDynamicShape": false,
+    "hasCollision": true,
+    "destroyTime": 1.5,
+    "explosionResistance": 6.0,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "friction": 0.6,
+    "harvestLevel": 0,
+    "stackSize": 64,
+    "tabGroup": "multiblocked.all"
+  },
+  "status": {
+    "unformed": {
+      "renderer": {
+        "state": {
+          "id": "minecraft:cut_copper_slab",
+          "meta": 3
+        },
+        "type": "blockstate",
+        "postRenderer": true
+      }
+    },
+    "idle": {
+      "renderer": {
+        "state": {
+          "id": "minecraft:exposed_cut_copper_slab",
+          "meta": 3
+        },
+        "type": "blockstate",
+        "postRenderer": true
+      },
+      "parent": "unformed"
+    },
+    "working": {
+      "renderer": {
+        "state": {
+          "id": "minecraft:oxidized_cut_copper_slab",
+          "meta": 3
+        },
+        "type": "blockstate",
+        "postRenderer": true
+      },
+      "parent": "idle"
+    },
+    "suspend": {
+      "parent": "working"
+    }
+  },
+  "recipeMap": "islands",
+  "basePattern": {
+    "structureDir": [
+      "LEFT",
+      "UP",
+      "BACK"
+    ],
+    "pattern": [
+      [
+        "C   C",
+        "     "
+      ],
+      [
+        " BBB ",
+        " @   "
+      ],
+      [
+        " BBB ",
+        "  A  "
+      ],
+      [
+        " BBB ",
+        "     "
+      ],
+      [
+        "  C  ",
+        "     "
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "blocks": [
+          {
+            "id": "multiblocked:pedestal"
+          }
+        ],
+        "type": "blocks"
+      },
+      "controller": {
+        "location": "sky_island:island_forge",
+        "type": "component"
+      },
+      "B": {
+        "blocks": [
+          {
+            "id": "create:fluid_tank"
+          }
+        ],
+        "type": "blocks"
+      },
+      "C": {
+        "blocks": [
+          {
+            "id": "multiblocked:pedestal"
+          }
+        ],
+        "type": "blocks",
+        "slotName": "output1"
+      },
+      "any": {
+        "type": "any"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "A": [
+        "C"
+      ],
+      "B": [
+        "B"
+      ],
+      "C": [
+        "A"
+      ]
+    }
+  }
+}

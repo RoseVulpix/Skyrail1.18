@@ -1,0 +1,28 @@
+# .packwizignore follows the same format as .gitignore, and can be used to exclude unwanted files from pack exports
+# See https://git-scm.com/docs/gitignore
+
+# Exclude README
+/README.md
+
+# Exlude probe, Probe should be run on the client side
+/kubejs/probe/*
+/kubejs/documentation
+
+# Exclude all except resource packs we want
+/resourcepacks/*
+# !/resourcepacks/name
+
+#All the actual running modpack things
+.mixin.out/**
+crash-reports/**
+logs/**
+mods/**
+natives/**
+paintings/**
+palettes/**
+local/**
+patchouli_books/**
+saves/**
+schematics/**
+screenshots/**
+themes/**
