@@ -16,7 +16,6 @@
 .mixin.out/**
 crash-reports/**
 logs/**
-mods/**
 natives/**
 paintings/**
 palettes/**
